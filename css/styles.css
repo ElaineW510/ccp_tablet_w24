@@ -1,0 +1,296 @@
+/* Base styling for the navigation menu */
+.skip{
+    position: absolute;
+    left: -9999px;
+    height: 25px;
+    background-color: white;
+    overflow:hidden;
+    z-index: 1;
+}
+
+.skip:focus{
+    position: absolute;
+    left: 0;
+    width:auto;
+    height:auto;
+    overflow: visible;
+    z-index: 10000;
+}
+
+
+body {
+  font-family: Poppins, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a[href="#main_section"] {
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: inline-block; 
+  text-decoration: none;
+  background-color: #f0f0f0; 
+  border-radius: 5px;
+  color: #333;
+}
+
+header {
+  grid-column: 1 / -1;
+}
+
+h1 {
+  font-family: Popins, sans-serif;
+  text-align: center;
+  margin: 20px;
+  font-size: 200%;
+}
+
+h2{
+  font-weight: bold;
+  margin:15px 0px;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Creates a grid with 4 equal columns */
+  align-items: center;
+  text-align: center; /* Center text in each grid item */
+  background: #b4f3e6; /* Background color of the nav bar */
+}
+
+
+/* Styling for each navigation link */
+nav a {
+  float: left; /* Aligns the links horizontally */
+  color: #191f1f; /* Text color */
+  text-align: center; /* Centers text within the link */
+  padding: 14px 16px; /* Padding around the text */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 17px; /* Font size */
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  text-decoration: underline;
+  background-color: #6be98d; /* Light background on hover */
+  color: #191f1f; /* Text color change on hover */
+}
+
+
+nav a.active {
+  border: 4px solid #2e1ee3;
+  text-decoration: underline; /* Underlines the active menu item */
+  color: #191f1f; /* Optionally change the color of the active item for better visibility */
+}
+
+/*style the p in main that always stay in middle of the page*/
+#main_section p{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  margin:20px 0 0 0;
+}
+
+main {
+  display: grid;
+  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 10px 30px 10px;
+  place-items: center;
+  align-items: center;
+}
+
+section {
+  grid-column: 1 / -1;
+}
+
+
+
+img {
+  border: 4px solid #8B7B8B;
+  padding: 8px;
+  background-color: #fff;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+video{
+  border: 4px solid #8B7B8B;
+  padding: 8px;
+  background-color: #fff;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.recipe {
+  display:block;
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recipe img {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.recipe p {
+  margin-top: 20px;
+}
+
+.travel {
+  display:block;
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.travel img {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.travel p {
+  margin-top: 20px;
+}
+
+.pet {
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pet img{
+  display:block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pet p {
+  margin: 10px 0;
+}
+
+
+
+@media screen and (min-width: 768px){
+  nav ul{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .gallery{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 1.5em;
+  }
+
+
+  h2{
+    font-size: 1.5em;
+    font-weight: 200;
+    color: navy;
+
+  }
+
+
+  .pet2{
+    display:grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    padding: 20px;
+    column-gap: 50px;
+    margin:50px
+  }
+
+  .pet2 h2{
+    grid-column: 1 / 2;
+    margin: 0;
+  }
+
+  .pet2 img{
+    grid-column:1;
+    height:auto;
+  }
+
+  .pet2 p{
+    grid-column:2;
+    grid-row:2/3;
+    align-items: start;
+  }
+
+  .recipe{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .reciple h2{
+    text-align: center;
+  }
+
+  .recipe p{
+    grid-column:2;
+    grid-row:2/3;
+    align-items: start;
+  }
+
+  .recipe img{
+    margin-bottom: 20px;
+  }
+
+  .travel{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .travel h2{
+    /* text-align: center; */
+    /* align-self: center; */
+    grid-column: 2 / -1;
+    margin: 0;
+
+  }
+
+  .travel p{
+    grid-column:2;
+    grid-row:2/3;
+    align-items: start;
+
+  }
+
+  .travel img{
+    /* margin-bottom: 20px; */
+    grid-column:1;
+    height:auto;
+  }
+}
